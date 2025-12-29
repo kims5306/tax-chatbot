@@ -1,0 +1,39 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Environment Variables (Keep secrets local!)
+.env
+
+# Data Files (Optional: If vector DB is huge, you might ignore it, but for Streamlit Cloud with local persistence, we must commit it)
+# We are NOT ignoring chroma_db because we want to push the pre-built index to the cloud
+# chroma_db/ 
+
+# Raw Data (Too large for GitHub sometimes, but mainly we just need the Index)
+# tax db/
+# But if it's <100MB, it's fine.

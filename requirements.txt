@@ -1,0 +1,9 @@
+streamlit
+chromadb
+google-generativeai
+python-dotenv
+requests
+xmltodict
+pypdf
+sentence-transformers
+pysqlite3-binary
