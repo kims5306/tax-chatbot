@@ -136,8 +136,29 @@ if prompt := st.chat_input("질문을 입력하세요..."):
                 context_text += f"[Document {i+1}]\nTitle: {meta.get('case_name')}\nContent: {doc}\n\n"
                 references.append(meta)
 
-    # 3. Gemini Generation
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # 3. Gemini Generation (Dynamic Model Selection)
+    available_models = []
+    try:
+        for m in genai.list_models():
+            if 'generateContent' in m.supported_generation_methods:
+                available_models.append(m.name)
+    except Exception as e:
+        available_models = []
+
+    # Prefer Flash -> Pro -> Default
+    model_name = "gemini-1.5-flash" # Fallback
+    for m in available_models:
+        if "flash" in m:
+            model_name = m
+            break
+        elif "pro" in m and "1.5" in m:
+            model_name = m
+    
+    # Clean up model name (remove 'models/' prefix if present for the client, though library handles both)
+    if model_name.startswith("models/"):
+        model_name = model_name.replace("models/", "")
+        
+    model = genai.GenerativeModel(model_name)
     
     system_prompt = f"""
     당신은 한국의 유능한 세무 전문 AI 변호사입니다.
