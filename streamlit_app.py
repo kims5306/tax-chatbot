@@ -137,7 +137,7 @@ if prompt := st.chat_input("질문을 입력하세요..."):
                 references.append(meta)
 
     # 3. Gemini Generation
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     
     system_prompt = f"""
     당신은 한국의 유능한 세무 전문 AI 변호사입니다.
@@ -175,3 +175,15 @@ if prompt := st.chat_input("질문을 입력하세요..."):
                     
             except Exception as e:
                 st.error(f"Error generating response: {e}")
+                
+                # Debug: List available models
+                try:
+                    st.warning("🔍 Debug: Available Models for this API Key:")
+                    available_models = []
+                    for m in genai.list_models():
+                        if 'generateContent' in m.supported_generation_methods:
+                            available_models.append(m.name)
+                    st.code(available_models)
+                    st.info("If the list is empty, check your API Key permissions.")
+                except Exception as debug_err:
+                    st.error(f"Debug failed: {debug_err}")
