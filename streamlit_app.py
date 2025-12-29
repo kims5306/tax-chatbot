@@ -137,7 +137,7 @@ if prompt := st.chat_input("질문을 입력하세요..."):
                 references.append(meta)
 
     # 3. Gemini Generation
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
     
     system_prompt = f"""
     당신은 한국의 유능한 세무 전문 AI 변호사입니다.
