@@ -1,0 +1,5 @@
+Total characters extracted: 3361728
+CRITICAL: Key phrase '이 법은 부가가치세의 과세 요건' NOT FOUND.
+
+FOUND CORP TAX START at 685
+FOUND INCOME TAX START at -1

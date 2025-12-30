@@ -65,7 +65,7 @@ with st.sidebar:
     
     st.markdown("---")
     st.markdown("### 📚 Data Sources")
-    st.caption("- main taxlaw.txt (Internal Law)")
+    st.caption("- main taxlaw.pdf (Internal Law)")
     st.caption("- National Law API (Precedents)")
     st.markdown("---")
     st.info("💡 질문 예시:\n- 부가가치세 신고 기간은?\n- 법인세 손금산입 요건은?\n- 업무무관가지급금이란?")

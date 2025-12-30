@@ -1,0 +1,95 @@
+Total characters extracted: 3361728
+
+--- Searching for Body of '소득세법' ---
+FOUND BODY START at 336
+소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」  
+...
+FOUND BODY START at 344
+소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」          
+...
+FOUND BODY START at 356
+소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 
+...
+Ref at 3855: (Likely TOC or Reference)
+Ref at 3882: (Likely TOC or Reference)
+Ref at 4021: (Likely TOC or Reference)
+Ref at 4521: (Likely TOC or Reference)
+Ref at 27575: (Likely TOC or Reference)
+Ref at 31632: (Likely TOC or Reference)
+Ref at 32934: (Likely TOC or Reference)
+
+--- Searching for Body of '법인세법' ---
+FOUND BODY START at 234
+법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙   LLM MCP용 부가세 1. 부가가치세법 2. 부가가치세법 시행령 3. 부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                               
+...
+FOUND BODY START at 242
+법인세법 시행령 3. 법인세법 시행규칙   LLM MCP용 부가세 1. 부가가치세법 2. 부가가치세법 시행령 3. 부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                       
+...
+FOUND BODY START at 254
+법인세법 시행규칙   LLM MCP용 부가세 1. 부가가치세법 2. 부가가치세법 시행령 3. 부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                   
+...
+FOUND BODY START at 469
+법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세의 과세 요건과 절차를 규정함으로써 법인세를 공정하게 과세하고, 납세의무의 적절한 이행을 확보하며, 재정수입의 원활한 조달에 이바지함을 
+...
+FOUND BODY START at 477
+법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세의 과세 요건과 절차를 규정함으로써 법인세를 공정하게 과세하고, 납세의무의 적절한 이행을 확보하며, 재정수입의 원활한 조달에 이바지함을 목적으로 한다.
+...
+FOUND BODY START at 489
+법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세의 과세 요건과 절차를 규정함으로써 법인세를 공정하게 과세하고, 납세의무의 적절한 이행을 확보하며, 재정수입의 원활한 조달에 이바지함을 목적으로 한다. [본조신설 2018.
+...
+FOUND BODY START at 629
+법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세의 과세 요건과 절차를 규정함으로써 법인세를 공정하게 과세하고, 납세의무의 적절한 이행을 확보하며, 재정수입의 원활한 조달에 이바지함을 목적으로 한다. [본조신설 2018. 12. 24.] [종전 제1조는 제2조로 이동 <2018. 12. 24.>]   제2조(정의) 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2013. 1. 1., 2018. 12. 24., 2022. 12. 31.> 1. “내국법인”이란 본
+...
+Ref at 1590: (Likely TOC or Reference)
+FOUND BODY START at 1837
+법인세법」 8. “연결집단”이란 연결법인 전체를 말한다. 9. “연결모법인”(連結母法人)이란 연결집단 중 다른 연결법인을 연결지배하는 연결법인을 말한다. 10. “연결자법인”(連結子法人)이란 연결모법인의 연결지배를 받는 연결법인을 말한다. 10의2. “연결지배”란 내국법인이 다른 내국법인의 발행주식총수 또는 출자총액의 100분의 90 이상을 보유하고 있는 경우를 말한다. 이 경우 그 보유비율은 다음 각 목에서 정하는 바 에 따라 계산한다. 가. 의결권 없는 주식 또는 출자지분을 포함할 것 나. 「상법」 또는 「자본시장과 금융투자업에
+...
+Ref at 3313: (Likely TOC or Reference)
+
+--- Searching for Body of '부가가치세법' ---
+FOUND BODY START at 282
+부가가치세법 2. 부가가치세법 시행령 3. 부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                  
+...
+FOUND BODY START at 292
+부가가치세법 시행령 3. 부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                            
+...
+FOUND BODY START at 306
+부가가치세법 시행규칙   LLM MCP용 소득세 1. 소득세법 2. 소득세법 시행령 3. 소득세법 시행령   LLM MCP용 기타세목 1. 국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                          
+...
+Ref at 9015: (Likely TOC or Reference)
+Ref at 27599: (Likely TOC or Reference)
+Ref at 27677: (Likely TOC or Reference)
+Ref at 113689: (Likely TOC or Reference)
+Ref at 115377: (Likely TOC or Reference)
+Ref at 172307: (Likely TOC or Reference)
+Ref at 172369: (Likely TOC or Reference)
+
+--- Searching for Body of '국세기본법' ---
+FOUND BODY START at 384
+국세기본법 2. 국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적)
+...
+FOUND BODY START at 393
+국세기본법 시행령 3. 국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세
+...
+FOUND BODY START at 406
+국세기본법 시행규칙 4. 국세징수법 5. 국세징수법 시행령 6. 국세징수법 시행규칙 LLM MCP용 법인세 1. 법인세법 2. 법인세법 시행령 3. 법인세법 시행규칙  법제처                                                            2                                                       국가법령정보센터 「법인세법」               제1장 총칙 <개정 2010. 12. 30.>   제1조(목적) 이 법은 법인세의 과세 요건과 절차를 
+...
+Ref at 1197: (Likely TOC or Reference)
+Ref at 10016: (Likely TOC or Reference)
+Ref at 34402: (Likely TOC or Reference)
+Ref at 82781: (Likely TOC or Reference)
+Ref at 83275: (Likely TOC or Reference)
+Ref at 89745: (Likely TOC or Reference)
+Ref at 95935: (Likely TOC or Reference)
+
+--- Searching for Body of '상속세 및 증여세법' ---
+Ref at 33038: (Likely TOC or Reference)
+Ref at 77445: (Likely TOC or Reference)
+Ref at 89610: (Likely TOC or Reference)
+Ref at 106427: (Likely TOC or Reference)
+Ref at 142572: (Likely TOC or Reference)
+Ref at 324147: (Likely TOC or Reference)
+Ref at 324237: (Likely TOC or Reference)
+Ref at 324653: (Likely TOC or Reference)
+Ref at 325679: (Likely TOC or Reference)
+Ref at 326648: (Likely TOC or Reference)

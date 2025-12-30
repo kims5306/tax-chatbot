@@ -164,62 +164,137 @@ def ingest_local_files():
         print(f"Directory not found: {LOCAL_DATA_DIR}")
         return
 
-    files = [f for f in os.listdir(LOCAL_DATA_DIR) if f.endswith('.txt')]
+    print("Ingesting local files...")
+    
+    # 1. Load Texts
+    full_texts = [] # (filename, text_content)
+    
+    # Only process main taxlaw.pdf for now as it's the primary target
+    try:
+        files = [f for f in os.listdir("tax db") if f.lower().endswith('.pdf')]
+    except FileNotFoundError:
+        print("tax db directory not found")
+        return
+
+    for filename in files:
+        filepath = os.path.join("tax db", filename)
+        print(f"Reading {filename}...")
+        
+        text = ""
+        try:
+            import pypdf
+            reader = pypdf.PdfReader(filepath)
+            for page in reader.pages:
+                extracted = page.extract_text()
+                extracted = extracted if extracted else ""
+                text += extracted + "\n"
+        except Exception as e:
+            print(f"Error reading PDF {filename}: {e}")
+            continue
+            
+        if not text.strip():
+            print(f"Skipping empty file: {filename}")
+            continue
+            
+        full_texts.append((filename, text))
+
+    # 2. Segment Text by Law Name
     
     ids = []
     documents = []
     metadatas = []
     
-    for filename in files:
-        filepath = os.path.join(LOCAL_DATA_DIR, filename)
-        print(f"Reading {filename}...")
+    import re
+    
+    for filename, text in full_texts:
+        print(f"Segmenting {filename}...")
         
-        try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                text = f.read()
-        except UnicodeDecodeError:
-            # Fallback for ANSI/CP949 encoded files common in Windows/Hangul
-            with open(filepath, 'r', encoding='cp949') as f:
-                text = f.read()
+        segments = [] # (start_idx, law_name)
+        
+        # Find all occurrences of "제1조(목적)"
+        start_search = 0
+        while True:
+            idx = text.find("제1조(목적)", start_search)
+            if idx == -1: break
+            
+            # Analyze preceding text for Law Name
+            pre_text = text[max(0, idx-200):idx]
+            
+            # Regex to find 「...」
+            match = re.search(r"「(.*?)」", pre_text)
+            
+            law_name = "Unknown Law"
+            if match:
+                law_name = match.group(1) # e.g. 부가가치세법
+            else:
+                # Fallback: look for lines ending with "법" or "령" or "규칙"
+                lines = pre_text.split('\n')
+                for line in reversed(lines):
+                    clean = line.strip()
+                    if clean.endswith("법") or clean.endswith("령") or clean.endswith("규칙"):
+                         law_name = clean
+                         break
+            
+            segments.append((idx, law_name))
+            start_search = idx + 1
+            
+        # Create Chunks from Segments    
+        total_chars = len(text)
+        
+        # Handle case where no segments found (treat as one whole unknown doc)
+        if not segments:
+            segments = [(0, "Unknown Document")]
+
+        for i, (seg_start, law_name) in enumerate(segments):
+            seg_end = segments[i+1][0] if i + 1 < len(segments) else total_chars
+            
+            segment_text = text[seg_start:seg_end]
+            
+            print(f"  Processing Segment: {law_name} ({len(segment_text)} chars)")
+            
+            # Chunk this segment
+            chunk_size = 1000
+            chunk_overlap = 200
+            
+            cursor = 0
+            while cursor < len(segment_text):
+                end = min(cursor + chunk_size, len(segment_text))
+                chunk_str = segment_text[cursor:end]
                 
-        # Simple Chunking (Window size 1000, Overlap 200)
-        CHUNK_SIZE = 1000
-        OVERLAP = 200
-        
-        total_len = len(text)
-        start = 0
-        chunk_idx = 0
-        
-        while start < total_len:
-            end = start + CHUNK_SIZE
-            chunk_text = text[start:end]
-            
-            # Metadata
-            chunk_id = f"local_{filename}_{chunk_idx}"
-            meta = {
-                "source": "local_file",
-                "doc_id": chunk_id,
-                "case_name": f"{filename} (Part {chunk_idx+1})", # Display title
-                "type": "법령", # Law
-                "filename": filename
-            }
-            
-            ids.append(chunk_id)
-            documents.append(chunk_text)
-            metadatas.append(meta)
-            
-            start += (CHUNK_SIZE - OVERLAP)
-            chunk_idx += 1
-            
+                # IMPORTANT: Prepend Law Name to Chunk Content
+                enriched_chunk = f"[{law_name}]\n{chunk_str}"
+                
+                doc_id = f"local_{filename}_{i}_{cursor}"
+                
+                ids.append(doc_id)
+                documents.append(enriched_chunk)
+                metadatas.append({
+                    "source": "local",
+                    "filename": filename,
+                    "law_name": law_name,
+                    "doc_id": doc_id,
+                    "chunk_retrieval_tag": law_name
+                })
+                
+                cursor += (chunk_size - chunk_overlap)
+                
+    print(f"Total chunks created: {len(documents)}")
+    
     if ids:
         print(f"Upserting {len(ids)} chunks from local files...")
-        batch_size = 500  # ChromaDB might have batch limits
+        batch_size = 100  # Conservative batch size
         for i in range(0, len(ids), batch_size):
-            collection.upsert(
-                ids=ids[i:i+batch_size],
-                documents=documents[i:i+batch_size],
-                metadatas=metadatas[i:i+batch_size]
-            )
+            try:
+                collection.upsert(
+                    ids=ids[i:i+batch_size],
+                    documents=documents[i:i+batch_size],
+                    metadatas=metadatas[i:i+batch_size]
+                )
+                if i % 1000 == 0:
+                     print(f"  Upserted {i}...")
+            except Exception as e:
+                print(f"Error upserting batch {i}: {e}")
+                
         print("Local ingestion complete.")
 
 if __name__ == "__main__":
@@ -230,6 +305,5 @@ if __name__ == "__main__":
     # 1. Ingest API Precedents
     ingest_precedents()
     
-    # 2. Ingest Local Tax Laws (TXT)
+    # 2. Ingest Local Tax Laws
     ingest_local_files()
-
